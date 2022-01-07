@@ -18,6 +18,8 @@ It's much nicer towards your users if their website only ever downloads what is 
 ### Normalize
 Using [Normalize.css](https://necolas.github.io/normalize.css]Normalize.css) to sync all browsers to same design and to fix common bugs.
 
+### Docs - VueJs
+Building the docs using VueJS. Simply because I am most familiar with this one.
 
 ## License
 MIT
