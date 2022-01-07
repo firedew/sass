@@ -1,6 +1,6 @@
 # Firedew UI
 
-This is a project I have started because I am missing a good design library for general informative websites.
+This is a project I have started because I am missing a good css library for general informative websites.
 There a loads of amazing frameworks out there but they all seem to fous on components for web applications, 
 which is quite different from a website providing information and a good look.
 
@@ -15,8 +15,9 @@ This project will consist of sass variables, mixins and components with customiz
 To be imported individually as needed. I will provide an import containing everything for those who prefer to be lazy, but I don't recommend this.
 It's much nicer towards your users if their website only ever downloads what is actually uses.
 
-### Pure CSS
-We will start with this one.
+### Normalize
+Using [Normalize.css](https://necolas.github.io/normalize.css]Normalize.css) to sync all browsers to same design and to fix common bugs.
+
 
 ## License
-MIT (of course). I collect what is already shared, modify it and share it back.
+MIT
