@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server -c ./docs/webpack.config.js",
-    "build": "webpack --node-env production -c ./docs/webpack.config.js"
+    "build": "webpack --node-env production -c ./docs/webpack.config.js",
+    "deploy": "node scripts/gh-pages-deploy.js"
   },
   "repository": {
     "type": "git",
