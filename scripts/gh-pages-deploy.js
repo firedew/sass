@@ -14,7 +14,7 @@ const folderName = 'docs/dist';
     console.log('Pushing to gh-pages...')
     execSync('git push origin HEAD:gh-pages --force')
     fs.rmdirSync(folderName, { recursive: true });
-    execSync('git checkout -f feature/gh-pages')
+    execSync('git checkout -f main')
     execSync('git branch -D gh-pages')
     console.log('Successfully deployed, check your settings')
   } catch (e) {
