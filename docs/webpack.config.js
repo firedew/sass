@@ -4,10 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require('vue-loader')
 
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
-  mode: 'development',
+  mode: isProd ? 'production' : 'development',
   entry: './docs/main.js',
   output: {
+    publicPath: isProd ? '/sass/' : '',
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
