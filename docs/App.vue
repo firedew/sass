@@ -1,7 +1,14 @@
 <template>
- <div>
-   <h1>FireDew SASS documentation</h1>
-   <p>Welcome to the FireDew documentation pages.</p>
+ <div class="fd-container">
+   <ul>
+     <li>
+       <router-link to="/">Home</router-link>
+     </li>
+     <li>
+       <router-link to="/grid">Grid</router-link>
+     </li>
+   </ul>
+   <router-view />
  </div>
 </template>
 
@@ -14,9 +21,4 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-$black: #646464;
-
-h1 {
-    color: $black;
-}
 </style>
