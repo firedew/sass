@@ -1,24 +1,23 @@
-/* eslint-disable no-console */
-const execa = require('execa')
+const { execSync } = require('child_process');
 const fs = require('fs');
+const folderName = 'docs/dist';
+
 (async () => {
   try {
-    await execa('git', ['checkout', '--orphan', 'gh-pages'])
-    // eslint-disable-next-line no-console
+    execSync('git checkout --orphan gh-pages')
+
     console.log('Building started...')
-    await execa('npm', ['run', 'build'])
-    // Understand if it's dist or build folder
-    const folderName = fs.existsSync('dist') ? 'dist' : 'build'
-    await execa('git', ['--work-tree', folderName, 'add', '--all'])
-    await execa('git', ['--work-tree', folderName, 'commit', '-m', 'gh-pages'])
+    execSync('npm run build')
+    execSync(`git --work-tree ${folderName} add --all`)
+    execSync(`git --work-tree ${folderName} commit -m gh-pages`)
+
     console.log('Pushing to gh-pages...')
-    await execa('git', ['push', 'origin', 'HEAD:gh-pages', '--force'])
-    await execa('rm', ['-r', folderName])
-    await execa('git', ['checkout', '-f', 'main'])
-    await execa('git', ['branch', '-D', 'gh-pages'])
+    execSync('git push origin HEAD:gh-pages --force')
+    fs.rmdirSync(folderName, { recursive: true });
+    execSync('git checkout -f feature/gh-pages')
+    execSync('git branch -D gh-pages')
     console.log('Successfully deployed, check your settings')
   } catch (e) {
-    // eslint-disable-next-line no-console
     console.log(e.message)
     process.exit(1)
   }
