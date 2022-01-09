@@ -1,17 +1,21 @@
 <template>
-  <navbar>
+  <nav class="fd-navbar fd-navbar--elevated">
     <div class="fd-container">
-      <router-link to="/">FireDew</router-link>
-      <router-link to="/components">Components</router-link>
+      <router-link class="fd-navbar-brand" to="/">FireDew</router-link>
+      <div class="fd-navbar-collapse">
+        <ul class="fd-navbar-nav">
+          <li class="fd-nav-item">
+            <router-link class="fd-nav-link" to="/components">Components</router-link>
+          </li>
+        </ul>
+      </div>
     </div>
-  </navbar>
+  </nav>
 </template>
 
 <script>
-import Navbar from './components/Navbar'
 export default {
   name: 'AppNavbar',
-  components: { Navbar }
 }
 </script>
 
