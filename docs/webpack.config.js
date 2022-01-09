@@ -14,6 +14,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  resolve: {
+    extensions: ['.js', '.vue', '.scss']
+  },
   module: {
     rules: [
       { test: /\.(js|jsx)$/, use: 'babel-loader' },
