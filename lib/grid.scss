@@ -1,6 +1,6 @@
 @use 'sass:math';
-@import './lib/_variables.scss';
-@import './lib/_breakpoints.scss';
+@import './lib/variables.scss';
+@import './lib/breakpoints.scss';
 
 $include-column-box-sizing: true !default;
 
