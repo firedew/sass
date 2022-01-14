@@ -9,6 +9,11 @@
           </li>
         </ul>
       </div>
+      <div>
+        <a href="https://github.com/firedew/sass">
+          <img alt="Github link" width="32" src="static/Github-light.svg"/>
+        </a>
+      </div>
     </div>
   </nav>
 </template>
