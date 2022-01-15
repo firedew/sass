@@ -1,0 +1,9 @@
+.fd-flex {
+  display: flex;
+}
+
+.fd-justify-content {
+  &--space-between {
+    justify-content: space-between;
+  }
+}

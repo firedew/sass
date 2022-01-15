@@ -2,16 +2,14 @@
   <nav class="fd-navbar fd-navbar--elevated">
     <div class="fd-container">
       <router-link class="fd-navbar-brand" to="/">FireDew</router-link>
-      <div class="fd-navbar-collapse">
+      <div class="fd-navbar-collapse fd-flex">
         <ul class="fd-navbar-nav">
           <li class="fd-nav-item">
             <router-link class="fd-nav-link" to="/components">Components</router-link>
           </li>
         </ul>
-      </div>
-      <div>
         <a href="https://github.com/firedew/sass">
-          <img alt="Github link" width="32" src="static/Github-light.svg"/>
+          <img class="fd-img fd-img--32x32" alt="Github link" src="static/Github-light.svg"/>
         </a>
       </div>
     </div>
