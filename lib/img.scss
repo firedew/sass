@@ -1,0 +1,28 @@
+@use 'sass:math';
+$imgSizeBase: 16 !default;
+$imgSizeVariants: (
+  1: px, // 16px
+  2: px, // 32px
+  3: px, // 48px
+  4: px, // 64px
+  6: px, // 96px
+  8: px  // 128px
+) !default;
+
+.fd-img {
+  display: block;
+  position: relative;
+  max-width: 100%;
+
+  @each $i in map-keys($imgSizeVariants) {
+    $size: $i * $imgSizeBase;
+    &--#{$size}x#{$size} {
+      width: $size + map-get($imgSizeVariants, $i);
+      height: $size + map-get($imgSizeVariants, $i);
+    }
+  }
+
+  &--rounded {
+    border-radius: 50%;
+  }
+}

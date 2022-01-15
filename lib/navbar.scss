@@ -116,11 +116,13 @@
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
 .fd-navbar-collapse {
+  display: flex;
   flex-basis: auto;
   flex-grow: 1;
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
+  justify-content: space-between;
 }
 
 // Button for toggling the navbar when in its collapsed state

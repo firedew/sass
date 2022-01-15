@@ -18,6 +18,15 @@ It's much nicer towards your users if their website only ever downloads what is 
 ### Normalize
 Using [Normalize.css](https://necolas.github.io/normalize.css]Normalize.css) to sync all browsers to same design and to fix common bugs.
 
+### Bootstrap
+Being the most popular framework it is a natural place for resources. I think that I will tweak the CSS naming to BEM notations however.
+
+### Bulma
+This one caught my interest and is now inspiring my images classes.
+
+### Material
+It just looks great and elevation options have been inspired by Material Design.
+
 ### Docs - VueJs
 Building the docs using VueJS. Simply because I am most familiar with this one.
 
