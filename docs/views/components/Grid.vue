@@ -36,8 +36,8 @@ export default {
     <div class="example-block">
       .fd-row
       <div class="fd-row">
-        <div class="fd-col"><div class="example-block example-block__nested">.fd-col</div></div>
-        <div class="fd-col"><div class="example-block example-block__nested">.fd-col</div></div>
+        <div class="fd-col"><div class="example-block">.fd-col</div></div>
+        <div class="fd-col"><div class="example-block">.fd-col</div></div>
       </div>
     </div>
   </div>
@@ -61,10 +61,6 @@ export default {
   border-radius: 4px;
   border: 1px solid $purple-200;
   background-color: $purple-100;
-
-  .example-block__nested {
-    background-color: $purple-200;
-  }
 }
 
 
