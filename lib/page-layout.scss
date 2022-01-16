@@ -1,0 +1,12 @@
+// Use these to set up a page wrapper and set main content to always stretch to th bottom
+
+.fd-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fd-page__content {
+  flex-grow: 1;
+  background: var(--fd-page-content-bg);
+}

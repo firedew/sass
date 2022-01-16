@@ -1,0 +1,9 @@
+// a list of fun backgrounds to apply
+
+.fd-bg-page-content-tilted-line {
+  --fd-page-content-bg: #{linear-gradient(165deg, #f7f5fb 50%, #fff 50%)};
+}
+
+.fd-bg-tilted-line {
+  background: linear-gradient(165deg, #f7f5fb 50%, #fff 50%);
+}

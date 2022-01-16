@@ -1,7 +1,9 @@
 <template>
-  <app-navbar/>
-  <div class="fd-container">
-    <router-view/>
+  <div class="fd-page">
+    <app-navbar/>
+    <div class="fd-page__content">
+      <router-view/>
+    </div>
   </div>
 </template>
 
