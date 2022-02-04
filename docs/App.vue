@@ -1,7 +1,7 @@
 <template>
-  <app-navbar/>
-  <div class="fd-container">
-    <router-view/>
+  <div class="fd-site">
+    <app-navbar/>
+    <router-view class="fd-page"/>
   </div>
 </template>
 

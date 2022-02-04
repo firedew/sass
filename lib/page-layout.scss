@@ -1,0 +1,20 @@
+// Use these to set up a site with a page that will always stretch to the bottom
+
+.fd-site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .fd-page {
+    flex-grow: 1;
+  }
+}
+
+.fd-page {
+  display: flex;
+  flex-direction: column;
+
+  & > &__grow {
+    flex-grow: 1;
+  }
+}

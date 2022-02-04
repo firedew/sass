@@ -8,6 +8,8 @@ import '../lib/nav.scss'
 import '../lib/display-utils.scss'
 import '../lib/img.scss'
 import '../lib/ratio.scss'
+import '../lib/backgrounds.scss'
+import '../lib/page-layout.scss'
 
 import { createApp } from 'vue'
 import { router } from './router/router'

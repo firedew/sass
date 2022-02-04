@@ -1,5 +1,9 @@
 .fd-flex {
   display: flex;
+
+   &--grow {
+     flex-grow: 1;
+   }
 }
 
 .fd-justify-content {

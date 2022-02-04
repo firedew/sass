@@ -16,7 +16,7 @@ To be imported individually as needed. I will provide an import containing every
 It's much nicer towards your users if their website only ever downloads what is actually uses.
 
 ### Normalize
-Using [Normalize.css](https://necolas.github.io/normalize.css]Normalize.css) to sync all browsers to same design and to fix common bugs.
+Using [Normalize.css](https://necolas.github.io/normalize.css]Normalize.css) to sync all browsers to same baseline and to fix common bugs.
 
 ### Bootstrap
 Being the most popular framework it is a natural place for resources. I think that I will tweak the CSS naming to BEM notations however.
