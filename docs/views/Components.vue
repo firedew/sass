@@ -1,6 +1,6 @@
 <template>
   <div class="fd-container">
-    <div class="fd-row">
+    <div class="fd-row fd-page__grow">
       <div class="fd-col-md-auto side-nav">
         <h2>Components</h2>
         <ul>
@@ -30,6 +30,6 @@ export default {
 
 <style lang="scss" scoped>
 .side-nav {
-  border-right: 1px solid black;
+  border-right: 1px solid var(--fd-gray-300);
 }
 </style>
