@@ -28,5 +28,6 @@ jobs:
           path: |
             backstop_data
             !backstop_data/bitmaps_reference/**
-            !backstop_data/engine/scripts/**
+            !backstop_data/engine_scripts/**
+            !backstop_data/scenarios.js
           retention-days: 5
