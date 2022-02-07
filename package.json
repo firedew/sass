@@ -4,6 +4,9 @@
   "description": "FireDew sass components",
   "main": "index.js",
   "scripts": {
+    "backstop:test": "backstop test --config=backstop.config.js",
+    "backstop:test:docker": "backstop test --config=backstop.config.js --docker",
+    "backstop:approve": "backstop approve --config=backstop.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server -c ./docs/webpack.config.js",
     "build": "webpack --node-env production -c ./docs/webpack.config.js",
@@ -22,6 +25,7 @@
   "author": "Swaana Snorradottir",
   "license": "MIT",
   "dependencies": {
+    "backstopjs": "^6.0.4",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

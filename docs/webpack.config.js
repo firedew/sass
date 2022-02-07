@@ -45,6 +45,7 @@ module.exports = {
   ],
   devServer: {
     hot: true,
+    allowedHosts: 'all',
     static: {
       directory: dest,
     },

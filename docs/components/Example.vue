@@ -1,5 +1,5 @@
 <template>
-  <div class="docs-example" ref="exampleRef">
+  <div class="docs-example" ref="exampleRef" :id="$attrs.id">
     <slot/>
   </div>
   <div class="docs-code">

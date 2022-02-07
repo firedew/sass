@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'ComponentsHome'
+  name: 'Intro'
 }
 </script>
 

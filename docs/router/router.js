@@ -2,8 +2,8 @@ import * as VueRouter from 'vue-router'
 import Grid from '../views/components/Grid.vue'
 import Home from '../views/Home.vue'
 import Components from '../views/Components'
-import ComponentsHome from '../views/components/ComponentsHome'
-import Img from '../views/components/Images'
+import Intro from '../views/components/Intro'
+import Images from '../views/components/Images'
 import Ratio from '../views/components/Ratio'
 
 const routes = [
@@ -12,9 +12,9 @@ const routes = [
     path: '/components',
     component: Components,
     children: [
-      { path: '', component: ComponentsHome },
+      { path: '', component: Intro },
       { path: 'grid', component: Grid },
-      { path: 'images', component: Img },
+      { path: 'images', component: Images },
       { path: 'ratio', component: Ratio },
     ]
   },
