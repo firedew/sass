@@ -1,7 +1,6 @@
 const scenarios = require('./backstop_data/scenarios');
-
-// const baseUrl = 'http://localhost:8080/#/';
-const baseUrl = 'http://host.docker.internal:8080/#/';
+const isDocker = process.argv.includes('--moby')
+const baseUrl = isDocker ? 'http://host.docker.internal:8080/#/' : 'http://localhost:8080/#/';
 
 scenarios.forEach((s) => {
   s.url = `${baseUrl}${s.url}`;
