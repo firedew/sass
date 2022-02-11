@@ -1,0 +1,4 @@
+const path = require('path')
+module.exports = [
+  ...require(path.resolve(__dirname, '../docs/views/components/Grid.bs.js')),
+]

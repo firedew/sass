@@ -2,8 +2,8 @@
   <h1>Grid system</h1>
   <p>Here we will show the grid system</p>
   <div>
-    <example :source="example1"/>
-    <example :source="example2"/>
+    <example :source="example1" id="bs1"/>
+    <example :source="example2" id="bs2"/>
   </div>
 </template>
 
