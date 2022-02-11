@@ -8,11 +8,11 @@ const { VueLoaderPlugin } = require('vue-loader')
 const isProd = process.env.NODE_ENV === 'production'
 const dest = path.resolve(__dirname, 'dist')
 
-module.exports = {
+module.exports = (env) => ({
   mode: isProd ? 'production' : 'development',
   entry: './docs/main.js',
   output: {
-    publicPath: isProd ? '/sass/' : '',
+    publicPath: isProd && !env.local ? '/sass/' : '',
     path: dest,
     filename: 'bundle.js',
   },
@@ -50,4 +50,4 @@ module.exports = {
       directory: dest,
     },
   }
-};
+});
