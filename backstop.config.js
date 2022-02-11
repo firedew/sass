@@ -8,6 +8,7 @@ scenarios.forEach((s) => {
 
 module.exports = {
   "id": "firedew_sass",
+  "dockerCommandTemplate": "docker run --rm -i --mount type=bind,source=\"{cwd}\",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}",
   "viewports": [
     {
       "label": "phone",
