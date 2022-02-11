@@ -1,10 +1,10 @@
-const scenarios = require('./backstop_data/scenarios')
+const scenarios = require('./scenarios')
 const isDockerMode = process.argv.includes('--moby')
 const needsServer = process.argv.includes('--needs-server')
 const baseUrl = isDockerMode && !needsServer ? 'http://host.docker.internal:8080/#/' : 'http://localhost:8080/#/'
 
 if (isDockerMode && needsServer) {
-  const server = require('./backstop_data/devServer.js')
+  const server = require('./devServer.js')
 
   const originalWrite = console.log;
   console.log = function (string) {

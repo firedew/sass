@@ -4,15 +4,13 @@
   "description": "FireDew sass components",
   "main": "index.js",
   "scripts": {
-    "backstop:test": "backstop test --config=backstop.config.js --docker --needs-server",
-    "backstop:test:ci": "wait-on http://localhost:8080 && backstop test --config=backstop.config.js",
-    "backstop:report": "backstop openReport --config=backstop.config.js",
-    "backstop:approve": "backstop approve --config=backstop.config.js",
+    "backstop:test": "backstop test --config=backstop_data/.config.js --docker --needs-server",
+    "backstop:report": "backstop openReport --config=ackstop_data/backstop.config.js",
+    "backstop:approve": "backstop approve --config=ackstop_data/backstop.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server -c ./docs/webpack.config.js",
     "build": "webpack --node-env production -c ./docs/webpack.config.js",
     "build:local": "npm run build -- --env local",
-    "server:start": "node ./backstop_data/devServer.js",
     "deploy:pages": "node scripts/gh-pages-deploy.js"
   },
   "repository": {
