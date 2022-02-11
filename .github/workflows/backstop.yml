@@ -19,7 +19,7 @@ jobs:
       - name: Start server
         run: npm run dev &
       - name: Backstop
-        run: npm run backstop:test
+        run: npm run backstop:test:ci
       - name: Archive backstop results
         uses: actions/upload-artifact@v2
         if: failure()
