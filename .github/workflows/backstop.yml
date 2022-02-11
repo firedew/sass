@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Start server
-        run: npm run build:dev
+        run: npm run build:local
       - name: Backstop
         run: npm run backstop:test
       - name: Archive backstop results
