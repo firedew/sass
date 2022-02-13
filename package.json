@@ -27,7 +27,8 @@
   "author": "Swaana Snorradottir",
   "license": "MIT",
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "rfs": "^9.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
