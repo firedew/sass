@@ -1,23 +1,20 @@
-@import './lib/variables';
-@import './lib/root';
+@import "./lib/variables";
+@import "./lib/root";
 
 // Body
-//
-// 2. As a best practice, apply a default `background-color`.
-// 3. Prevent adjustments of font size after orientation changes in iOS.
-// 4. Change the default tap highlight to be completely transparent in iOS.
 
-// scss-docs-start reboot-body-rules
 body {
-  font-family: var(--#{$css-var-prefix}body-font-family);
-  font-size: var(--#{$css-var-prefix}body-font-size);
-  font-weight: var(--#{$css-var-prefix}body-font-weight);
-  line-height: var(--#{$css-var-prefix}body-line-height);
-  color: var(--#{$css-var-prefix}body-color);
-  text-align: var(--#{$css-var-prefix}body-text-align);
-  background-color: var(--#{$css-var-prefix}body-bg); // 2
-  -webkit-text-size-adjust: 100%; // 3
-  -webkit-tap-highlight-color: rgba($black, 0); // 4
-}
-// scss-docs-end reboot-body-rules
+  font-family: var(--fd-body-font-family);
+  font-size: var(--fd-body-font-size);
+  font-weight: var(--fd-body-font-weight);
+  line-height: var(--fd-body-line-height);
+  color: var(--fd-body-color);
+  text-align: var(--fd-body-text-align);
+  background-color: var(--fd-body-bg);
 
+  // Prevent adjustments of font size after orientation changes in iOS.
+  -webkit-text-size-adjust: 100%; /* stylelint-disable-line property-no-vendor-prefix */
+
+  // Change the default tap highlight to be completely transparent in iOS.
+  -webkit-tap-highlight-color: rgba($black, 0);
+}

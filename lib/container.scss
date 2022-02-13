@@ -1,33 +1,34 @@
-@import './lib/variables.scss';
-@import './lib/breakpoints.scss';
+@import "./lib/variables";
+@import "./lib/breakpoints";
 
 // Container mixins
 
 @mixin make-container($gutter: $container-padding-x) {
-  --#{$css-var-prefix}gutter-x: #{$gutter};
-  --#{$css-var-prefix}gutter-y: 0;
+  --fd-gutter-x: #{$gutter};
+  --fd-gutter-y: 0;
+
   width: 100%;
-  padding-right: var(--#{$css-var-prefix}gutter-x, #{$gutter});
-  padding-left: var(--#{$css-var-prefix}gutter-x, #{$gutter});
+  padding-right: var(--fd-gutter-x, #{$gutter});
+  padding-left: var(--fd-gutter-x, #{$gutter});
   margin-right: auto;
   margin-left: auto;
 }
 
 // Container widths
-//
 // Set the container width, and override it for fixed navbars in media queries.
 
 // Single container class with breakpoint max-widths
 .fd-container,
   // 100% wide container at all breakpoints
-.fd-container-fluid {
-  @include make-container();
+.fd-container-fluid,
+%fd-container-fluid {
+  @include make-container;
 }
 
 // Responsive containers that are 100% wide until a breakpoint
 @each $breakpoint, $container-max-width in $container-max-widths {
   .fd-container-#{$breakpoint} {
-    @extend .fd-container-fluid;
+    @extend %fd-container-fluid;
   }
 
   @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
@@ -39,13 +40,13 @@
     $extend-breakpoint: true;
 
     @each $name, $width in $grid-breakpoints {
-      @if ($extend-breakpoint) {
+      @if $extend-breakpoint {
         .fd-container#{breakpoint-infix($name, $grid-breakpoints)} {
           @extend %responsive-container-#{$breakpoint};
         }
 
         // Once the current breakpoint is reached, stop extending
-        @if ($breakpoint == $name) {
+        @if $breakpoint == $name {
           $extend-breakpoint: false;
         }
       }

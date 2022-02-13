@@ -1,11 +1,10 @@
-@import './node_modules/rfs/scss';
-@import './lib/variables-nav';
-@import './lib/gradients';
-@import './lib/breakpoints';
-@import './lib/elevation';
+@import "./node_modules/rfs/scss";
+@import "./lib/variables-nav";
+@import "./lib/gradients";
+@import "./lib/breakpoints";
+@import "./lib/elevation";
 
 // Contents
-//
 // Navbar
 // Navbar brand
 // Navbar nav
@@ -15,7 +14,6 @@
 // Navbar themes
 
 // Navbar
-//
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
 
@@ -26,7 +24,8 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   padding: $navbar-padding-y $navbar-padding-x;
-  @include gradient-bg();
+
+  @include gradient-bg;
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
@@ -54,18 +53,17 @@
   }
 }
 
-
 // Navbar brand
-//
 // Used for brand, project, or site names.
 
 .fd-navbar-brand {
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-brand-margin-end;
-  @include font-size($navbar-brand-font-size);
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
+
+  @include font-size($navbar-brand-font-size);
 
   &:hover,
   &:focus {
@@ -73,9 +71,7 @@
   }
 }
 
-
 // Navbar nav
-//
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
 .fd-navbar-nav {
@@ -96,19 +92,14 @@
   }
 }
 
-
 // Navbar text
-//
-//
 
 .fd-navbar-text {
   padding-top: $nav-link-padding-y;
   padding-bottom: $nav-link-padding-y;
 }
 
-
 // Responsive navbar
-//
 // Custom styles for responsive collapsing and toggling of navbar contents.
 // Powered by the collapse Bootstrap JavaScript plugin.
 
@@ -119,12 +110,14 @@
   display: flex;
   flex-basis: auto;
   flex-grow: 1;
+
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
   justify-content: space-between;
 }
 
+/* stylelint-disable */
 // Button for toggling the navbar when in its collapsed state
 //.fd-navbar-toggler {
 //  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
@@ -145,6 +138,7 @@
 //    box-shadow: 0 0 0 $navbar-toggler-focus-width;
 //  }
 //}
+/* stylelint-enable */
 
 // Keep as a separate element so folks can easily override it with another icon
 // or image file as needed.
@@ -159,10 +153,11 @@
 }
 
 .fd-navbar-nav-scroll {
-  max-height: var(--#{$css-var-prefix}scroll-height, 75vh);
+  max-height: var(--fd-scroll-height, 75vh);
   overflow-y: auto;
 }
 
+/* stylelint-disable */
 // scss-docs-start navbar-expand-loop
 // Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.
@@ -343,3 +338,4 @@
 //    }
 //  }
 //}
+/* stylelint-enable */

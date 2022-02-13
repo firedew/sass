@@ -1,0 +1,20 @@
+name: Lint CI
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backstop:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 14.19
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.19
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
