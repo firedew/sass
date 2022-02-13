@@ -3,7 +3,6 @@
   @return red($value), green($value), blue($value);
 }
 
-// scss-docs-start color-functions
 // Tint a color: mix a color with white
 @function tint-color($color, $weight) {
   @return mix(white, $color, $weight);
@@ -18,4 +17,3 @@
 @function shift-color($color, $weight) {
   @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
 }
-// scss-docs-end color-functions

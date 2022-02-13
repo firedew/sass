@@ -1,58 +1,61 @@
-@import './lib/variables';
-@import './lib/colors';
-@import './lib/functions';
+@use "sass:meta";
+@import "./lib/variables";
+@import "./lib/colors";
+@import "./lib/functions";
 
 :root {
   // Note: Custom variable values only support SassScript inside `#{}`.
 
   // Colors
-  //
   // Generate palettes for full colors, grays, and theme colors.
 
   @each $color, $value in $colors {
-    --#{$css-var-prefix}#{$color}: #{$value};
+    --fd-#{$color}: #{$value};
   }
 
   @each $color, $value in $grays {
-    --#{$css-var-prefix}gray-#{$color}: #{$value};
+    --fd-gray-#{$color}: #{$value};
   }
 
   @each $color, $value in $theme-colors {
-    --#{$css-var-prefix}#{$color}: #{$value};
+    --fd-#{$color}: #{$value};
   }
 
-  //@each $color, $value in $theme-colors-rgb {
-  //  --#{$css-var-prefix}#{$color}-rgb: #{$value};
-  //}
+  // @each $color, $value in $theme-colors-rgb {
+  //  --fd-#{$color}-rgb: #{$value};
+  // }
 
-  --#{$css-var-prefix}white-rgb: #{to-rgb($white)};
-  --#{$css-var-prefix}black-rgb: #{to-rgb($black)};
-  --#{$css-var-prefix}body-color-rgb: #{to-rgb($body-color)};
-  --#{$css-var-prefix}body-bg-rgb: #{to-rgb($body-bg)};
+  --fd-white-rgb: #{to-rgb($white)};
+  --fd-black-rgb: #{to-rgb($black)};
+  --fd-body-color-rgb: #{to-rgb($body-color)};
+  --fd-body-bg-rgb: #{to-rgb($body-bg)};
 
   // Fonts
 
   // Note: Use `inspect` for lists so that quoted items keep the quotes.
   // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
-  --#{$css-var-prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
-  --#{$css-var-prefix}font-monospace: #{inspect($font-family-monospace)};
-  --#{$css-var-prefix}gradient: #{$gradient};
+  --fd-font-sans-serif: #{meta.inspect($font-family-sans-serif)};
+  --fd-font-monospace: #{meta.inspect($font-family-monospace)};
+  --fd-gradient: #{$gradient};
 
   // Root and body
   // stylelint-disable custom-property-empty-line-before
   // scss-docs-start root-body-variables
-  @if $font-size-root != null {
-    --#{$css-var-prefix}root-font-size: #{$font-size-root};
+  @if $font-size-root {
+    --fd-root-font-size: #{$font-size-root};
   }
-  --#{$css-var-prefix}body-font-family: #{$font-family-base};
-  //@include rfs($font-size-base, --#{$css-var-prefix}body-font-size);
-  --#{$css-var-prefix}body-font-weight: #{$font-weight-base};
-  --#{$css-var-prefix}body-line-height: #{$line-height-base};
-  --#{$css-var-prefix}body-color: #{$body-color};
-  @if $body-text-align != null {
-    --#{$css-var-prefix}body-text-align: #{$body-text-align};
+  --fd-body-font-family: #{$font-family-base};
+
+  // @include rfs($font-size-base, --fd-body-font-size);
+  --fd-body-font-weight: #{$font-weight-base};
+  --fd-body-line-height: #{$line-height-base};
+  --fd-body-color: #{$body-color};
+
+  @if $body-text-align {
+    --fd-body-text-align: #{$body-text-align};
   }
-  --#{$css-var-prefix}body-bg: #{$body-bg};
+  --fd-body-bg: #{$body-bg};
+
   // scss-docs-end root-body-variables
   // stylelint-enable custom-property-empty-line-before
 }
