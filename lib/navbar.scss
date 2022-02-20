@@ -62,12 +62,18 @@
   margin-right: $navbar-brand-margin-end;
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap;
+  color: $navbar-brand-color;
 
   @include font-size($navbar-brand-font-size);
 
   &:hover,
   &:focus {
     text-decoration: if($link-hover-decoration == underline, none, null);
+  }
+
+  &.fd-nav-link--active,
+  &.fd-nav-link--exact-active {
+    background-color: transparent;
   }
 }
 
@@ -81,11 +87,6 @@
   margin-bottom: 0;
   margin-top: 0;
   list-style: none;
-
-  .fd-nav-link {
-    padding-right: 0;
-    padding-left: 0;
-  }
 
   .fd-dropdown-menu {
     position: static;

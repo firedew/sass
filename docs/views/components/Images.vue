@@ -34,7 +34,3 @@ export default {
   components: { Example }
 }
 </script>
-
-<style scoped>
-
-</style>

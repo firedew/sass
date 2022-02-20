@@ -7,6 +7,8 @@
   font-weight: $nav-link-font-weight;
   color: $nav-link-color;
   text-decoration: if($link-decoration == none, null, none);
+  cursor: pointer;
+  border-radius: 0.25rem;
 
   // @include transition($nav-link-transition);
   @include font-size($nav-link-font-size);
@@ -15,6 +17,7 @@
   &:focus {
     color: $nav-link-hover-color;
     text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: tint-color($nav-link-hover-color, 90%);
   }
 
   // Disabled state lightens text
@@ -22,5 +25,20 @@
     color: $nav-link-disabled-color;
     pointer-events: none;
     cursor: default;
+  }
+
+  &--active,
+  &--exact-active {
+    background-color: tint-color($nav-link-hover-color, 90%);
+  }
+}
+
+// Nav List
+.fd-nav-list {
+  padding: 0;
+  list-style: none;
+
+  .fd-nav-link {
+    padding: $nav-link-padding-y * 0.5 $nav-link-padding-x * 0.5;
   }
 }
