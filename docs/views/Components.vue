@@ -3,15 +3,14 @@
     <div class="fd-row fd-page__grow">
       <div class="fd-col-md-auto side-nav">
         <h2>Components</h2>
-        <ul>
-          <li>
-            <router-link to="/components/grid">Grid</router-link>
-          </li>
-          <li>
-            <router-link to="/components/images">Images</router-link>
-          </li>
-          <li>
-            <router-link to="/components/ratio">Ratio</router-link>
+        <ul class="fd-nav-list">
+          <li v-for="component in components">
+            <router-link
+              class="fd-nav-link"
+              :to="component.path"
+            >
+              {{ component.label }}
+            </router-link>
           </li>
         </ul>
       </div>
@@ -24,7 +23,17 @@
 
 <script>
 export default {
-  name: 'Components'
+  name: 'Components',
+  setup () {
+    return {
+      components: [
+        { label: 'Grid', path: '/components/grid' },
+        { label: 'Images', path: '/components/images' },
+        { label: 'Ratio', path: '/components/ratio' },
+        { label: 'Nav links', path: '/components/nav-links' },
+      ]
+    }
+  }
 }
 </script>
 

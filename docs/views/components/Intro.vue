@@ -8,7 +8,3 @@ export default {
   name: 'Intro'
 }
 </script>
-
-<style scoped>
-
-</style>
