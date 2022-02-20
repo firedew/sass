@@ -10,7 +10,7 @@ if (isDockerMode && needsServer) {
   console.log = function (string) {
     originalWrite(...arguments);
 
-    if (string.indexOf('Command "test" successfully executed') > -1) {
+    if (string.indexOf('Command "test"') > -1) {
       server.close();
     }
   }
