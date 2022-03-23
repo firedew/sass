@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/core": "7.17.8",
     "@vue/compiler-sfc": "3.2.31",
-    "babel-loader": "8.2.3",
+    "babel-loader": "8.2.4",
     "backstopjs": "6.0.4",
     "copy-webpack-plugin": "10.2.4",
     "css-loader": "6.7.1",
