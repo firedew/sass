@@ -42,7 +42,7 @@
     "postcss-loader": "7.0.1",
     "sass": "1.55.0",
     "sass-loader": "13.1.0",
-    "stylelint": "14.12.1",
+    "stylelint": "14.14.0",
     "stylelint-config-standard-scss": "5.0.0",
     "vue": "3.2.41",
     "vue-loader": "17.0.0",
