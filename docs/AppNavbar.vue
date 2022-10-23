@@ -9,7 +9,7 @@
           </li>
         </ul>
         <a href="https://github.com/firedew/sass">
-          <img class="fd-img fd-img--32x32" alt="Github link" src="static/Github-light.svg"/>
+          <img class="fd-img fd-img--32x32" alt="Github link" src="assets/Github-light.svg"/>
         </a>
       </div>
     </div>
