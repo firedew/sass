@@ -35,8 +35,8 @@ module.exports = {
       'height': 768
     }
   ],
-  'onBeforeScript': 'puppet/onBefore.js',
-  'onReadyScript': 'puppet/onReady.js',
+  'onBeforeScript': 'playwright/onBefore.js',
+  'onReadyScript': 'playwright/onReady.js',
   scenarios,
   'paths': {
     'bitmaps_reference': 'backstop_data/bitmaps_reference',
@@ -46,7 +46,7 @@ module.exports = {
     'ci_report': 'backstop_data/ci_report'
   },
   'report': ['browser'],
-  'engine': 'puppeteer',
+  'engine': 'playwright',
   'engineOptions': {
     'args': ['--no-sandbox']
   },
