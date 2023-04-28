@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "rfs": "^9.0.6"
+    "rfs": "^10.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.21.4",
