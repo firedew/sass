@@ -10,7 +10,7 @@ if (isDockerMode && needsServer) {
   console.log = function (string) {
     originalWrite(...arguments);
 
-    if (string.indexOf('Command "test"') > -1) {
+    if (string.indexOf && string.indexOf('Command "test"') > -1) {
       server.close();
     }
   }
@@ -22,7 +22,7 @@ scenarios.forEach((s) => {
 
 module.exports = {
   'id': 'firedew_sass',
-  'dockerCommandTemplate': 'docker run --rm -i --mount type=bind,source="{cwd}",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}',
+  'dockerCommandTemplate': 'docker run --rm -i --user $(id -u):$(id -g) --mount type=bind,source="{cwd}",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}',
   'viewports': [
     {
       'label': 'phone',
