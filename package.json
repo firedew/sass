@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.21.5",
-    "@vue/compiler-sfc": "3.2.47",
+    "@vue/compiler-sfc": "3.3.4",
     "babel-loader": "9.1.2",
     "backstopjs": "6.2.1",
     "copy-webpack-plugin": "11.0.0",
@@ -44,7 +44,7 @@
     "sass-loader": "13.2.2",
     "stylelint": "14.16.1",
     "stylelint-config-standard-scss": "6.1.0",
-    "vue": "3.2.47",
+    "vue": "3.3.4",
     "vue-loader": "17.1.0",
     "vue-router": "4.2.1",
     "wait-on": "7.0.1",
