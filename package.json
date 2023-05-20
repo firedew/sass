@@ -48,7 +48,7 @@
     "vue-loader": "17.1.0",
     "vue-router": "4.2.1",
     "wait-on": "7.0.1",
-    "webpack": "5.81.0",
+    "webpack": "5.83.1",
     "webpack-cli": "5.0.2",
     "webpack-dev-server": "4.15.0"
   }
