@@ -45,7 +45,7 @@
     "stylelint": "14.16.1",
     "stylelint-config-standard-scss": "6.1.0",
     "vue": "3.3.4",
-    "vue-loader": "17.1.0",
+    "vue-loader": "17.1.2",
     "vue-router": "4.2.2",
     "wait-on": "7.0.1",
     "webpack": "5.83.1",
