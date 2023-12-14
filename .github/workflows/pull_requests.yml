@@ -34,7 +34,7 @@ jobs:
       - name: Backstop
         run: npm run backstop:test -- --needs-server
       - name: Archive backstop results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: backstop-report
