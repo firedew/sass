@@ -37,7 +37,7 @@
     "backstopjs": "6.2.2",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.11.0",
-    "html-webpack-plugin": "5.5.1",
+    "html-webpack-plugin": "5.6.3",
     "mini-css-extract-plugin": "2.7.6",
     "postcss-loader": "7.3.4",
     "sass": "1.69.5",
