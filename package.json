@@ -40,7 +40,7 @@
     "html-webpack-plugin": "5.5.1",
     "mini-css-extract-plugin": "2.7.6",
     "postcss-loader": "7.3.4",
-    "sass": "1.69.5",
+    "sass": "1.83.0",
     "sass-loader": "13.3.3",
     "stylelint": "14.16.1",
     "stylelint-config-standard-scss": "6.1.0",
